@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #333;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            position: relative;
+            width: 200px;
+            height: 300px;
+            perspective: 500px;
+        }
+
+        .side{
+            width: 200px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 500ms ease-in;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #0006;
+        }
+        .front{
+            background-color: tomato;
+            transform: rotateY(0)
+        }
+        .back{
+            background-color: royalblue;
+            transform: rotateY(180deg); /*-180* is desines i kaire*/
+        }
+        .card:hover .front{
+            transform: rotateY(180deg);  /*-180* is desines i kaire*/
+        }
+        .card:hover .back{
+            transform: rotateY(360deg);  /*-360* is desines i kaire*/
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="side front">front</div>
+        <div class="side back">back</div>
+    </div>
+</body>
+</html>

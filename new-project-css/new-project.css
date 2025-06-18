@@ -8,8 +8,10 @@ body{
     background-color: #333;
     color: gold;
     font-family: sans-serif;
-
-    overflow: hidden;
+    background-image:url(../image.png) ;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-X: hidden;
 }
 
 .container > * {
@@ -217,10 +219,52 @@ footer{
     }
 }
 
+/* Cards apsisuka*/
+        .card{
+            position: relative;
+            perspective: 500px;
+            background-color: transparent;
+        }
 
+        .side{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 500ms ease-in;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backface-visibility: hidden;
+        }
+        .front{
+            background-color: #444;
+            transform: rotateY(0)
+        }
+        .back{
+            background-color: royalblue;
+            transform: rotateY(180deg); /*-180* is desines i kaire*/
+            background-image: url(../image1.png);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: contain;
 
+        }
+        .card:hover .front{
+            transform: rotateY(180deg);  /*-180* is desines i kaire*/
+        }
+        .card:hover .back{
+            transform: rotateY(360deg);  /*-360* is desines i kaire*/
+        }
 
+/* Frosted glass */
+.section-4{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
 
+}
 
 
 
