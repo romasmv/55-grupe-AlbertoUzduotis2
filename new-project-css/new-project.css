@@ -11,6 +11,7 @@ body{
     background-image:url(../image.png) ;
     background-position: center;
     background-attachment: fixed;
+    background-size: 400px;
     overflow-X: hidden;
 }
 
@@ -264,6 +265,32 @@ footer{
     backdrop-filter: blur(20px);
     border-radius: 20px;
 
+}
+
+/* Promo uzrasas*/
+
+@font-face {
+    font-family: Sterion ;
+    src: url(../SterionItalic-R99PA.ttf);
+}
+
+.bg-txt {
+    font-family: Sterion;
+    font-size: 8vw;
+    letter-spacing: 5px;
+
+    background-image: url(../wallhaven-vq68m3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+
+    -webkit-text-stroke: 2px #fff; /*baltas remelis*/
+}
+
+.bg-txt:hover {
+    transform: skewX(-10deg) rotate(-5deg)
 }
 
 
